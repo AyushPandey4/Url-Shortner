@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL SHORTNER</title>
+</head>
+<body>
+    <div class="heading">
+        <h1>URL SHORTNER</h1>
+    </div>
+    <div class="main">
+        <form action="/result" method="post">
+            <input type="text" placeholder="paste your URL here" id="url" name="url">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+<br><br><br>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Full URL</th>
+                <th>Short URL</th>
+                <th>clicked</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% data.forEach(data => { %>
+                <tr>
+                    <td><%= data.originalURL %></td>
+                    <td><%= data.shortURL %></td>
+                    <td><%= data.clicked %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+
+    
+</body>
+</html>

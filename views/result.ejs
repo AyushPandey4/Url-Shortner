@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shortner</title>
+</head>
+<body>
+    <div class="heading">
+        <h1>RESULT</h1>
+    </div>
+    <div class="main">
+        <!-- <form action="#"> -->
+            <input type="text" id="url" value="<%= shortUrl %>">
+            <button onclick="copy()">Copy</button>
+        <!-- </form> -->
+    </div>
+    <script defer>
+        const copy = () => {
+            const url = document.getElementById('url');
+            navigator.clipboard.writeText(url.value);
+        }
+    </script>
+
+
+
+</body>
+</html>
